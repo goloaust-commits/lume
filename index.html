@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUME by GC Medical | Luxury Home Aesthetic Treatments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --medical-blue: #f8fafc;
+            --accent-gold: #d4b996; 
+            --soft-beige: #f5f2ed;  
+            --deep-slate: #1e1e1e;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #fff;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .hero-home {
+            background: linear-gradient(rgba(245, 242, 237, 0.75), rgba(245, 242, 237, 0.75)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .feature-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background-color: #faf9f7;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background-color: white;
+            box-shadow: 0 20px 40px rgba(212, 185, 150, 0.15);
+        }
+        .expertise-placeholder {
+            background-color: #1e1e1e;
+            width: 100%;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .bg-luxury-beige {
+            background-color: #f5f2ed;
+        }
+        .text-luxury-gold {
+            color: #d4b996;
+        }
+        .border-luxury-gold {
+            border-color: #d4b996;
+        }
+        .calendly-inline-widget {
+            min-width: 320px;
+            height: 700px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #f0efeb;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 40px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-stone-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-semibold tracking-widest text-stone-900">
+                LUME <span class="text-[10px] font-light tracking-normal opacity-60">by GC MEDICAL</span><span class="text-luxury-gold">.</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-wider font-medium items-center">
+                <a href="#home" class="hover:text-luxury-gold transition text-stone-900">Home</a>
+                <a href="#concept" class="hover:text-luxury-gold transition text-stone-900">Konzept</a>
+                <a href="#expertise" class="hover:text-luxury-gold transition text-stone-900">Expertise</a>
+                <a href="#treatments" class="hover:text-luxury-gold transition text-stone-900">Preise</a>
+                <span class="w-px h-4 bg-stone-200"></span>
+                <a href="#careers" class="text-[10px] text-stone-400 hover:text-luxury-gold transition">Work with us</a>
+            </div>
+            <div class="flex items-center space-x-5">
+                <div class="hidden lg:flex flex-col text-[9px] text-right uppercase tracking-tighter text-stone-500 leadership-none">
+                    <span>Mobile Medical Units</span>
+                    <span>Physicians only</span>
+                </div>
+                <a href="#book" class="bg-stone-900 text-white px-5 py-2 text-xs uppercase tracking-widest hover:bg-luxury-gold transition font-medium">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 hero-home min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-2xl">
+                <span class="text-stone-950 uppercase tracking-[0.3em] text-[11px] font-bold mb-4 block opacity-90">Luxury Home Treatment Service</span>
+                <h1 class="text-6xl md:text-8xl mb-6 leading-tight text-stone-900">
+                    Your Beauty <br>
+                    <span class="italic text-stone-950 font-semibold">At Home.</span>
+                </h1>
+                <p class="text-stone-800 text-lg mb-10 max-w-md leading-relaxed font-medium">
+                    Höchste medizinische Expertise trifft auf maximalen Komfort. LUME bringt spezialisierte Ärztinnen und Ärzte für eine Behandlung direkt zu Ihnen nach Hause.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#book" class="bg-stone-900 text-white px-8 py-4 text-sm uppercase tracking-widest text-center hover:bg-luxury-gold transition shadow-md">Termin vereinbaren</a>
+                    <a href="#expertise" class="border border-stone-900 text-stone-900 px-8 py-4 text-sm uppercase tracking-widest text-center hover:bg-stone-900 hover:text-white transition font-medium">Unsere Expertise</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Concept -->
+    <section id="concept" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl mb-4 italic leading-tight text-stone-900">Medizinische Exzellenz,<br>wo Sie sich wohlfühlen.</h2>
+                <p class="text-stone-400 uppercase tracking-widest text-[10px] font-bold">The LUME Mobile Standard</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card p-10 rounded-sm border border-stone-50">
+                    <div class="w-12 h-12 bg-luxury-gold/10 flex items-center justify-center rounded-full mb-6 text-luxury-gold font-bold">01</div>
+                    <h3 class="text-2xl serif mb-4 text-stone-900">Nur Approbierte Ärztinnen und Ärzte</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed">Keine Kompromisse. Jede Behandlung bei LUME wird ausschließlich von qualifizierten Fachärztinnen und Fachärzten durchgeführt.</p>
+                </div>
+                <div class="feature-card p-10 rounded-sm border border-stone-50">
+                    <div class="w-12 h-12 bg-luxury-gold/10 flex items-center justify-center rounded-full mb-6 text-luxury-gold font-bold">02</div>
+                    <h3 class="text-2xl serif mb-4 text-stone-900">Mobiles Equipment</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed">Wir bringen sterile Einheiten und Premium-Wirkstoffe mit. Medizinische Sicherheit auf Klinik-Niveau.</p>
+                </div>
+                <div class="feature-card p-10 rounded-sm border border-stone-50">
+                    <div class="w-12 h-12 bg-luxury-gold/10 flex items-center justify-center rounded-full mb-6 text-luxury-gold font-bold">03</div>
+                    <h3 class="text-2xl serif mb-4 text-stone-900">Absolute Diskretion</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed">Kein Wartezimmer, keine neugierigen Blicke. Ihr Treatment findet in Ihrer privaten Atmosphäre statt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-24 bg-stone-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1">
+                    <span class="text-luxury-gold uppercase tracking-[0.3em] text-xs font-semibold mb-4 block">Medical Professionals</span>
+                    <h2 class="text-5xl mb-8 leading-tight italic text-white">Ärztliche <br>Meisterhand.</h2>
+                    <p class="text-stone-400 mb-6 leading-relaxed">
+                        Bei LUME setzen wir neue Maßstäbe für mobile Ästhetik. Eine Behandlung in den eigenen vier Wänden erfordert nicht weniger, sondern mehr Sorgfalt. Deshalb besteht unser Team ausschließlich aus **approbierten Ärztinnen und Ärzten**.
+                    </p>
+                    <p class="text-stone-400 mb-8 leading-relaxed">
+                        Unsere Expertinnen und Experten verfügen über langjährige Erfahrung in der minimalinvasiven Gesichtsverjüngung. Mit feinstem ästhetischem Gespür sorgen wir für Ergebnisse, die Ihre Schönheit unterstreichen.
+                    </p>
+                    <div class="flex items-center space-x-6">
+                        <div class="border-l-2 border-luxury-gold pl-4">
+                            <p class="text-2xl serif italic text-white">100%</p>
+                            <p class="text-[9px] uppercase tracking-widest text-stone-500">Approbierte Ärztinnen und Ärzte</p>
+                        </div>
+                        <div class="border-l-2 border-luxury-gold pl-4">
+                            <p class="text-2xl serif italic text-white">Premium</p>
+                            <p class="text-[9px] uppercase tracking-widest text-stone-500">Standards & Hygiene</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <div class="relative min-h-[500px] flex items-center justify-center bg-stone-800 rounded-sm overflow-hidden shadow-2xl">
+                        <div class="absolute inset-0 border border-luxury-gold/30 z-20 pointer-events-none transform translate-x-3 -translate-y-3"></div>
+                        <div class="expertise-placeholder relative z-10">
+                            <div class="text-center">
+                                <div class="text-5xl md:text-6xl text-luxury-gold mb-6 italic serif tracking-wider">LUME</div>
+                                <div class="w-16 h-[1px] bg-luxury-gold mx-auto mb-6"></div>
+                                <div class="text-[10px] tracking-[0.6em] uppercase text-stone-500 font-light">Medical Excellence</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatments & Pricing -->
+    <section id="treatments" class="py-24 bg-luxury-beige">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=800" class="rounded-sm shadow-2xl opacity-90 grayscale hover:grayscale-0 transition duration-700" alt="Treatments">
+                    <div class="absolute -bottom-8 -left-8 bg-white p-6 shadow-xl border-l-4 border-luxury-gold">
+                        <p class="text-[10px] uppercase tracking-widest text-stone-400">Pauschalpreis</p>
+                        <p class="serif text-3xl font-bold text-stone-900">300€ <span class="text-sm font-light text-stone-500 italic">pro Zone</span></p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-5xl mb-8 leading-tight text-stone-900">Verfügbare <br><span class="italic text-luxury-gold">Behandlungszonen.</span></h2>
+                    <p class="text-stone-500 mb-8 text-sm leading-relaxed">Wir berechnen jede Zone mit einem einheitlichen Pauschalpreis von 300€. Dies beinhaltet die exklusive ärztliche Beratung vor Ort durch unsere Fachkräfte, das hochwertige Material sowie die bequeme Anfahrt zu Ihrer Wunschadresse.</p>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="flex items-center justify-between p-4 bg-white border border-stone-100 rounded-sm">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-1.5 h-1.5 bg-luxury-gold rounded-full"></div>
+                                <span class="text-sm uppercase tracking-wider font-medium text-stone-700">Stirnfalten</span>
+                            </div>
+                            <span class="text-[10px] text-luxury-gold font-bold">TOP</span>
+                        </div>
+                        <div class="flex items-center space-x-4 p-4 bg-white border border-stone-100 rounded-sm">
+                            <div class="w-1.5 h-1.5 bg-luxury-gold rounded-full"></div>
+                            <span class="text-sm uppercase tracking-wider font-medium text-stone-700">Zornesfalte (Glabella)</span>
+                        </div>
+                        <div class="flex items-center space-x-4 p-4 bg-white border border-stone-100 rounded-sm">
+                            <div class="w-1.5 h-1.5 bg-luxury-gold rounded-full"></div>
+                            <span class="text-sm uppercase tracking-wider font-medium text-stone-700">Lachfalten (Krähenfüße)</span>
+                        </div>
+                        <div class="flex items-center space-x-4 p-4 bg-white border border-stone-100 rounded-sm">
+                            <div class="w-1.5 h-1.5 bg-luxury-gold rounded-full"></div>
+                            <span class="text-sm uppercase tracking-wider font-medium text-stone-700">Masseter (Kiefer-Slimming)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section with Calendly -->
+    <section id="book" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-12">
+            <span class="text-luxury-gold uppercase tracking-[0.3em] text-xs font-semibold mb-4 block">Reservation</span>
+            <h2 class="text-5xl mb-6 italic text-stone-900">Hausbesuch buchen.</h2>
+            <p class="text-stone-500 max-w-xl mx-auto text-sm">Wählen Sie Ihren Wunschtermin direkt im Kalender aus. Unsere Ärzte bestätigen den Termin umgehend.</p>
+        </div>
+        
+        <div class="max-w-5xl mx-auto px-6">
+            <!-- CALENDLY EMBED START -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/YOUR_CALENDLY_LINK_HERE?hide_landing_page_details=1&hide_gdpr_banner=1&primary_color=d4b996"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- CALENDLY EMBED END -->
+        </div>
+    </section>
+
+    <!-- Careers Section (Subtle) -->
+    <section id="careers" class="py-20 bg-stone-50 border-t border-stone-100">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h3 class="text-3xl serif italic mb-4 text-stone-900">Join our Medical Team</h3>
+            <p class="text-stone-500 text-sm leading-relaxed mb-6">
+                LUME wächst rasant. Wir sind kontinuierlich auf der Suche nach leidenschaftlichen, approbierten Ärztinnen und Ärzten, die Teil unserer exklusiven Home-Service-Bewegung werden möchten.
+            </p>
+            <a href="mailto:gcmedicalug@gmail.com" class="text-luxury-gold font-medium hover:underline text-sm uppercase tracking-widest">gcmedicalug@gmail.com</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-950 text-stone-500 pt-24 pb-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 mb-16 text-center md:text-left">
+                <div>
+                    <div class="text-xl font-semibold tracking-widest text-white mb-6">LUME <span class="text-[9px] font-light tracking-normal opacity-40">by GC MEDICAL</span><span class="text-luxury-gold">.</span></div>
+                    <p class="text-[10px] uppercase tracking-[0.2em] leading-relaxed max-w-xs mx-auto md:mx-0">
+                        Exklusiver Home-Service für ästhetische Behandlungen auf medizinischem Höchstniveau.
+                    </p>
+                </div>
+                <div class="flex flex-col md:items-end justify-center">
+                    <p class="text-[10px] uppercase tracking-widest text-white mb-2">Für Mediziner</p>
+                    <p class="text-[11px] mb-4 opacity-70">Wir expandieren und suchen Verstärkung.</p>
+                    <a href="mailto:gcmedicalug@gmail.com" class="bg-white/5 border border-white/10 text-white px-4 py-2 text-[10px] uppercase tracking-widest hover:bg-white hover:text-stone-950 transition">Kontakt: gcmedicalug@gmail.com</a>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-white/5 text-center">
+                <div class="text-[10px] uppercase tracking-widest space-y-4">
+                    <div class="flex justify-center space-x-6 opacity-60">
+                        <button onclick="openModal('impressum')" class="hover:text-white transition">Impressum</button>
+                        <button onclick="openModal('agb')" class="hover:text-white transition">AGB</button>
+                        <button onclick="openModal('datenschutz')" class="hover:text-white transition">Datenschutz</button>
+                    </div>
+                    <div class="opacity-30">
+                        <p>&copy; 2024 LUME by GC Medical Home Services.</p>
+                        <p class="italic">Ärztliche Leitung: Dr. med. Aust / Dr. med. Schlemmer & Team</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <div id="impressum" class="modal">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl serif italic">Impressum</h2>
+                <button onclick="closeModal('impressum')" class="text-2xl">&times;</button>
+            </div>
+            <div class="text-sm space-y-4 text-stone-600 leading-relaxed">
+                <p><strong>Angaben gemäß § 5 TMG:</strong></p>
+                <p>GC Medical UG (haftungsbeschränkt)<br>
+                [STRASSE]<br>
+                [PLZ ORT]</p>
+                
+                <p><strong>Vertreten durch:</strong><br>
+                Geschäftsführung: [NAME]</p>
+
+                <p><strong>Kontakt:</strong><br>
+                E-Mail: gcmedicalug@gmail.com</p>
+
+                <p><strong>Registereintrag:</strong><br>
+                Eintragung im Handelsregister.<br>
+                Registergericht: [GERICHT]<br>
+                Registernummer: [NUMMER]</p>
+
+                <p><strong>Umsatzsteuer-ID:</strong><br>
+                [ID FALLS VORHANDEN]</p>
+
+                <p><strong>Aufsichtsbehörde:</strong><br>
+                Landesärztekammer [BUNDESLAND]</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="agb" class="modal">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl serif italic">Allgemeine Geschäftsbedingungen (AGB)</h2>
+                <button onclick="closeModal('agb')" class="text-2xl">&times;</button>
+            </div>
+            <div class="text-sm space-y-4 text-stone-600 leading-relaxed">
+                <h3 class="font-bold text-stone-900">1. Vertragsgegenstand & Plattformfunktion</h3>
+                <p>LUME (betrieben durch GC Medical UG) fungiert ausschließlich als Vermittlungsplattform zwischen Patienten und unabhängigen, approbierten Ärzten. LUME selbst erbringt keine medizinischen Leistungen.</p>
+                
+                <h3 class="font-bold text-stone-900">2. Behandlungsvertrag & Haftung</h3>
+                <p>Der Behandlungsvertrag kommt ausschließlich zwischen dem Patienten und dem jeweiligen ausführenden Arzt zustande. Die medizinische Verantwortung sowie die Haftung für die Durchführung und das Ergebnis der Behandlung liegen allein beim behandelnden Arzt. Jegliche Haftungsansprüche aus der ärztlichen Behandlung sind direkt an den Arzt zu richten.</p>
+                
+                <h3 class="font-bold text-stone-900">3. Pflichten der Ärzte</h3>
+                <p>Die über LUME vermittelten Ärzte sind rechtlich eigenständig und dazu verpflichtet, alle berufsrechtlichen Vorgaben (Approbation, Haftpflichtversicherung, Hygiene) eigenverantwortlich einzuhalten.</p>
+
+                <h3 class="font-bold text-stone-900">4. Terminbuchung & Ausfall</h3>
+                <p>Buchungen über die Plattform sind verbindlich. Etwaige Stornierungsbedingungen werden im Rahmen der Buchung mitgeteilt.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="datenschutz" class="modal">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl serif italic">Datenschutzerklärung</h2>
+                <button onclick="closeModal('datenschutz')" class="text-2xl">&times;</button>
+            </div>
+            <div class="text-sm space-y-4 text-stone-600 leading-relaxed">
+                <h3 class="font-bold text-stone-900">1. Datenschutz auf einen Blick</h3>
+                <p>Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften.</p>
+                
+                <h3 class="font-bold text-stone-900">2. Datenerfassung</h3>
+                <p>Die Datenverarbeitung erfolgt durch GC Medical UG. Kontaktdaten siehe Impressum.</p>
+                
+                <h3 class="font-bold text-stone-900">3. Calendly & Gesundheitsdaten</h3>
+                <p>Bei Buchung über Calendly werden Daten zur Terminabwicklung erfasst. Medizinische Daten werden zur Vorbereitung der Behandlung an den ausführenden Arzt weitergegeben.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+    </script>
+
+</body>
+</html>
